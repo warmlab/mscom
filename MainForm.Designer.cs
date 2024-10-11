@@ -46,11 +46,13 @@
             this.portLabel = new System.Windows.Forms.Label();
             this.displayTextBox = new System.Windows.Forms.TextBox();
             this.displaySettingGroupBox = new System.Windows.Forms.GroupBox();
+            this.base64CheckBox = new System.Windows.Forms.CheckBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.timeStampCheckBox = new System.Windows.Forms.CheckBox();
             this.displaySentCheckBox = new System.Windows.Forms.CheckBox();
             this.showHexCheckbox = new System.Windows.Forms.CheckBox();
             this.sendGroupBox = new System.Windows.Forms.GroupBox();
+            this.suffixComboBox = new System.Windows.Forms.ComboBox();
             this.fileTextBox = new System.Windows.Forms.TextBox();
             this.fileButton = new System.Windows.Forms.Button();
             this.countTextBox = new System.Windows.Forms.TextBox();
@@ -74,7 +76,8 @@
             this.sendCountLabel = new System.Windows.Forms.Label();
             this.receiveTextBox = new System.Windows.Forms.TextBox();
             this.recvCountLabel = new System.Windows.Forms.Label();
-            this.base64CheckBox = new System.Windows.Forms.CheckBox();
+            this.suffixLabel = new System.Windows.Forms.Label();
+            this.clearDisplayButton = new System.Windows.Forms.Button();
             this.portBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portPictureBox)).BeginInit();
             this.displaySettingGroupBox.SuspendLayout();
@@ -196,14 +199,21 @@
             // 
             // displaySettingGroupBox
             // 
-            resources.ApplyResources(this.displaySettingGroupBox, "displaySettingGroupBox");
+            this.displaySettingGroupBox.Controls.Add(this.clearDisplayButton);
             this.displaySettingGroupBox.Controls.Add(this.base64CheckBox);
             this.displaySettingGroupBox.Controls.Add(this.saveButton);
             this.displaySettingGroupBox.Controls.Add(this.timeStampCheckBox);
             this.displaySettingGroupBox.Controls.Add(this.displaySentCheckBox);
             this.displaySettingGroupBox.Controls.Add(this.showHexCheckbox);
+            resources.ApplyResources(this.displaySettingGroupBox, "displaySettingGroupBox");
             this.displaySettingGroupBox.Name = "displaySettingGroupBox";
             this.displaySettingGroupBox.TabStop = false;
+            // 
+            // base64CheckBox
+            // 
+            resources.ApplyResources(this.base64CheckBox, "base64CheckBox");
+            this.base64CheckBox.Name = "base64CheckBox";
+            this.base64CheckBox.UseVisualStyleBackColor = true;
             // 
             // saveButton
             // 
@@ -232,6 +242,8 @@
             // sendGroupBox
             // 
             resources.ApplyResources(this.sendGroupBox, "sendGroupBox");
+            this.sendGroupBox.Controls.Add(this.suffixLabel);
+            this.sendGroupBox.Controls.Add(this.suffixComboBox);
             this.sendGroupBox.Controls.Add(this.fileTextBox);
             this.sendGroupBox.Controls.Add(this.fileButton);
             this.sendGroupBox.Controls.Add(this.countTextBox);
@@ -244,6 +256,21 @@
             this.sendGroupBox.Controls.Add(this.sendButton);
             this.sendGroupBox.Name = "sendGroupBox";
             this.sendGroupBox.TabStop = false;
+            // 
+            // suffixComboBox
+            // 
+            this.suffixComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("suffixComboBox.AutoCompleteCustomSource"),
+            resources.GetString("suffixComboBox.AutoCompleteCustomSource1"),
+            resources.GetString("suffixComboBox.AutoCompleteCustomSource2")});
+            this.suffixComboBox.FormattingEnabled = true;
+            this.suffixComboBox.Items.AddRange(new object[] {
+            resources.GetString("suffixComboBox.Items"),
+            resources.GetString("suffixComboBox.Items1"),
+            resources.GetString("suffixComboBox.Items2"),
+            resources.GetString("suffixComboBox.Items3")});
+            resources.ApplyResources(this.suffixComboBox, "suffixComboBox");
+            this.suffixComboBox.Name = "suffixComboBox";
             // 
             // fileTextBox
             // 
@@ -298,6 +325,7 @@
             resources.ApplyResources(this.sendButton, "sendButton");
             this.sendButton.Name = "sendButton";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // SendTextBox
             // 
@@ -308,7 +336,6 @@
             // 
             resources.ApplyResources(this.displayPanel, "displayPanel");
             this.displayPanel.Controls.Add(this.dispalyGroupBox);
-            this.displayPanel.Controls.Add(this.displaySettingGroupBox);
             this.displayPanel.Name = "displayPanel";
             // 
             // dispalyGroupBox
@@ -386,17 +413,24 @@
             resources.ApplyResources(this.recvCountLabel, "recvCountLabel");
             this.recvCountLabel.Name = "recvCountLabel";
             // 
-            // base64CheckBox
+            // suffixLabel
             // 
-            resources.ApplyResources(this.base64CheckBox, "base64CheckBox");
-            this.base64CheckBox.Name = "base64CheckBox";
-            this.base64CheckBox.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.suffixLabel, "suffixLabel");
+            this.suffixLabel.Name = "suffixLabel";
+            // 
+            // clearDisplayButton
+            // 
+            resources.ApplyResources(this.clearDisplayButton, "clearDisplayButton");
+            this.clearDisplayButton.Name = "clearDisplayButton";
+            this.clearDisplayButton.UseVisualStyleBackColor = true;
+            this.clearDisplayButton.Click += new System.EventHandler(this.clearDisplayButton_Click);
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.statusPanel);
+            this.Controls.Add(this.displaySettingGroupBox);
             this.Controls.Add(this.sendPanel);
             this.Controls.Add(this.portBox);
             this.Controls.Add(this.displayPanel);
@@ -410,7 +444,6 @@
             this.sendGroupBox.ResumeLayout(false);
             this.sendGroupBox.PerformLayout();
             this.displayPanel.ResumeLayout(false);
-            this.displayPanel.PerformLayout();
             this.dispalyGroupBox.ResumeLayout(false);
             this.dispalyGroupBox.PerformLayout();
             this.sendPanel.ResumeLayout(false);
@@ -472,6 +505,9 @@
         private System.Windows.Forms.ComboBox handshakeComboBox;
         private System.Windows.Forms.Label handshakeLabel;
         private System.Windows.Forms.CheckBox base64CheckBox;
+        private System.Windows.Forms.ComboBox suffixComboBox;
+        private System.Windows.Forms.Label suffixLabel;
+        private System.Windows.Forms.Button clearDisplayButton;
     }
 }
 

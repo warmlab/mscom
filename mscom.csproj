@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HexString.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,8 +106,6 @@
   <ItemGroup>
     <None Include="asserts\circle-red.png" />
     <None Include="asserts\circle-green.png" />
-    <Content Include="asserts\plug.svg" />
-    <Content Include="asserts\unplug.svg" />
     <Content Include="xscom.ico" />
   </ItemGroup>
   <ItemGroup>

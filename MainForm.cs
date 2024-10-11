@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace mscom
@@ -27,6 +23,8 @@ namespace mscom
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // initialize menr
+            MenuInitialize();
             // initialize port list
             PortListInitialize();
 
@@ -49,6 +47,19 @@ namespace mscom
             //portPictureBox.Image = Image.FromFile(@"asserts\unplug.svg");
             string basePath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
             Console.WriteLine(basePath);
+        }
+
+        private void MenuInitialize()
+        {
+            this.Menu = new MainMenu();
+            MenuItem item = new MenuItem("File");
+            this.Menu.MenuItems.Add(item);
+            //item.MenuItems.Add("Save", new EventHandler(Save_Click));
+            //item.MenuItems.Add("Open", new EventHandler(Open_Click));
+            item = new MenuItem("Edit");
+            this.Menu.MenuItems.Add(item);
+            //item.MenuItems.Add("Copy", new EventHandler(Copy_Click));
+            //item.MenuItems.Add("Paste", new EventHandler(Paste_Click));
         }
 
         private void PortListInitialize()
@@ -154,19 +165,7 @@ namespace mscom
                         // Read data from the serial port
                         string data = _serialListener.ReceiveData(format, base64CheckBox.Checked);
                         //Console.WriteLine($"Received data: {data}");
-                        if (!string.IsNullOrEmpty(data))
-                        {
-                            // Invoke the UI thread to update the TextBox
-                            displayTextBox.Invoke(new Action(() =>
-                            {
-                                if (timeStampCheckBox.Checked)
-                                    displayTextBox.AppendText($"[{DateTime.Now.ToString("HH:mm:ss.fff", System.Globalization.DateTimeFormatInfo.InvariantInfo)}] ");
-                                displayTextBox.AppendText(data);
-                                displayTextBox.AppendText("\r\n");
-                                _receive_count += (ulong)data.Length;
-                                receiveTextBox.Text = $"{_receive_count}";
-                            }));
-                        }
+                        displayData(data);
                     }
                 }
                 catch (TimeoutException)
@@ -176,6 +175,76 @@ namespace mscom
 
                 Thread.Sleep(500); // TODO
             }
+        }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            int rc;
+            string message = SendTextBox.Text.Trim();
+            string suffix;
+            if (suffixComboBox.SelectedItem != null) {
+                suffix = suffixComboBox.SelectedItem.ToString().Replace(@"\r", "\r").Replace(@"\n", "\n");
+            } else
+            {
+                suffix = "";
+            }
+
+            byte[] data;
+
+            if (sendHexCheckBox.Checked)
+            {
+                message = message + " " + HexString.ConvertStringToHexString(suffix);
+                data = HexString.ConvertHexStringToBytes(message);
+            }
+            else
+            {
+                message = message + suffix;
+                data = Encoding.ASCII.GetBytes(message);
+            }
+
+            rc = _serialListener.SendData(data);
+            if (rc > 0)
+            {
+                _sent_count += (ulong)rc;
+                sentTextBox.Text = $"{_sent_count}";
+                if (displaySentCheckBox.Checked)
+                {
+                    if (showHexCheckbox.Checked)
+                        displayData(HexString.ConvertBytesToHexString(data));
+                    else
+                        displayData(message);
+                }
+            }
+        }
+
+        private void displayData(string data)
+        {
+            if (!string.IsNullOrEmpty(data))
+            {
+                // Invoke the UI thread to update the TextBox
+                displayTextBox.Invoke(new Action(() =>
+                {
+                    if (timeStampCheckBox.Checked)
+                        displayTextBox.AppendText($"[{DateTime.Now.ToString("HH:mm:ss.fff", System.Globalization.DateTimeFormatInfo.InvariantInfo)}] ");
+                    displayTextBox.AppendText(data.TrimEnd('\r', '\n'));
+                    displayTextBox.AppendText("\r\n");
+                    _receive_count += (ulong)data.Length;
+                    receiveTextBox.Text = $"{_receive_count}";
+
+                    if (displayTextBox.Lines.Count() > 1000) // TODO need to config by user
+                    {
+                        string[] lines = displayTextBox.Lines;
+                        displayTextBox.Lines = lines.Skip(lines.Length - 1000).ToArray();
+                        displayTextBox.Select(displayTextBox.Text.Length, 0);
+                        displayTextBox.ScrollToCaret();
+                    }
+                }));
+            }
+        }
+
+        private void clearDisplayButton_Click(object sender, EventArgs e)
+        {
+            displayTextBox.Clear();
         }
     }
 }

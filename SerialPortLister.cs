@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -94,7 +95,29 @@ namespace mscom
         }
 
         // Send data from the send TextBox
-        public int SendData(string message, DataFormat format)
+        public int SendData(byte[] data)
+        {
+            if (_serialPort.IsOpen)
+            {
+                try
+                {
+                    _serialPort.Write(data, 0, data.Length);
+                    return data.Length;
+                }
+                catch (Exception ex)
+                {
+                    Console.Error.WriteLine($"Error sending data: {ex.Message}");
+                    return -2;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Serial port is not open.");
+                return -1;
+            }
+        }
+
+        public int SendString(string message, DataFormat format)
         {
             if (_serialPort.IsOpen)
             {
@@ -102,9 +125,14 @@ namespace mscom
                 {
                     if (format == DataFormat.HEX)
                     {
-                        byte[] msg = ConvertHexStringToBytes(message);
+                        Console.WriteLine($"Sent: {message}");
+                        byte[] msg = HexString.ConvertHexStringToBytes(message);
                         _serialPort.Write(msg, 0, msg.Length);
                         Console.WriteLine($"Sent: {message}");
+                        foreach (byte a in msg)
+                        {
+                            Console.WriteLine($"{a}");
+                        }
 
                         return msg.Length;
                     }
@@ -118,7 +146,7 @@ namespace mscom
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error sending data: {ex.Message}");
+                    Console.Error.WriteLine($"Error sending data: {ex.Message}");
                     return -2;
                 }
             }
@@ -144,12 +172,13 @@ namespace mscom
                     }
                     catch (Exception ex)
                     {
+                        Console.Error.WriteLine($"Error in format base64 string: {ex}");
                         bytes = System.Text.Encoding.ASCII.GetBytes(inData);
                     }
 
                     if (format == DataFormat.HEX)
                     {
-                        return ConvertBytesToHexString(bytes);
+                        return HexString.ConvertBytesToHexString(bytes);
                     }
                     else
                     {
@@ -164,7 +193,7 @@ namespace mscom
 
                 if (format == DataFormat.HEX)
                 {
-                    return ConvertStringToHexString(inData);
+                    return HexString.ConvertStringToHexString(inData);
                 }
                 else
                 {
@@ -192,53 +221,6 @@ namespace mscom
         public bool IsOpen()
         {
             return _serialPort.IsOpen;
-        }
-
-        private byte[] ConvertHexStringToBytes(string hexString)
-        {
-            // Split the input string by spaces
-            string[] hexValues = hexString.Split(' ');
-
-            // Create a byte array to hold the converted values
-            byte[] byteArray = new byte[hexValues.Length];
-
-            // Loop through each hex value, convert to a byte, and add to the array
-            for (int i = 0; i < hexValues.Length; i++)
-            {
-                try
-                {
-                    // Convert the hex string (e.g., "04") to a byte
-                    byteArray[i] = Convert.ToByte(hexValues[i], 16);
-                }
-                catch (FormatException ex)
-                {
-                    Console.WriteLine($"Error converting hex string to byte: {ex.Message}");
-                }
-            }
-
-            return byteArray;
-        }
-
-        private string ConvertBytesToHexString(byte[] byteArray)
-        {
-            // Convert each character in the input string to its byte representation
-            //byte[] byteArray = System.Text.Encoding.ASCII.GetBytes(inputString);
-
-            // Convert each byte to a two-character hexadecimal string and join them with a space
-            string hexString = BitConverter.ToString(byteArray).Replace("-", " ").ToLower();
-
-            return hexString;
-        }
-
-        private string ConvertStringToHexString(string inputString)
-        {
-            // Convert each character in the input string to its byte representation
-            byte[] byteArray = System.Text.Encoding.ASCII.GetBytes(inputString);
-
-            // Convert each byte to a two-character hexadecimal string and join them with a space
-            string hexString = BitConverter.ToString(byteArray).Replace("-", " ").ToLower();
-
-            return hexString;
         }
     }
 }
