@@ -121,10 +121,6 @@
   <data name="portBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="portBox.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="handshakeComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>116, 218</value>
@@ -133,7 +129,7 @@
     <value>230, 30</value>
   </data>
   <data name="handshakeComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;handshakeComboBox.Name" xml:space="preserve">
     <value>handshakeComboBox</value>
@@ -147,6 +143,7 @@
   <data name="&gt;&gt;handshakeComboBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="portButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -157,7 +154,7 @@
     <value>230, 50</value>
   </data>
   <data name="portButton.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="portButton.Text" xml:space="preserve">
     <value>Open</value>
@@ -187,7 +184,7 @@
     <value>100, 22</value>
   </data>
   <data name="handshakeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="handshakeLabel.Text" xml:space="preserve">
     <value>Handshake</value>
@@ -211,10 +208,10 @@
     <value />
   </data>
   <data name="portPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 265</value>
+    <value>10, 269</value>
   </data>
   <data name="portPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 54</value>
+    <value>54, 50</value>
   </data>
   <data name="portPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -343,7 +340,7 @@
     <value>230, 30</value>
   </data>
   <data name="baudRateComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;baudRateComboBox.Name" xml:space="preserve">
     <value>baudRateComboBox</value>
@@ -370,7 +367,7 @@
     <value>100, 22</value>
   </data>
   <data name="baudRateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="baudRateLabel.Text" xml:space="preserve">
     <value>Baud Rate</value>
@@ -394,7 +391,7 @@
     <value>230, 30</value>
   </data>
   <data name="dataBitsComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;dataBitsComboBox.Name" xml:space="preserve">
     <value>dataBitsComboBox</value>
@@ -421,7 +418,7 @@
     <value>100, 22</value>
   </data>
   <data name="dataBitsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="dataBitsLabel.Text" xml:space="preserve">
     <value>Data Bits</value>
@@ -490,7 +487,7 @@
     <value>13</value>
   </data>
   <data name="portBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>4, 4</value>
   </data>
   <data name="portBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
@@ -514,10 +511,10 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;portBox.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>displayPanel</value>
   </data>
   <data name="&gt;&gt;portBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="displayTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -535,10 +532,10 @@
     <value>Both</value>
   </data>
   <data name="displayTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 575</value>
+    <value>814, 594</value>
   </data>
   <data name="displayTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;displayTextBox.Name" xml:space="preserve">
     <value>displayTextBox</value>
@@ -552,6 +549,102 @@
   <data name="&gt;&gt;displayTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;clearDisplayButton.Name" xml:space="preserve">
+    <value>clearDisplayButton</value>
+  </data>
+  <data name="&gt;&gt;clearDisplayButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearDisplayButton.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;clearDisplayButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;base64CheckBox.Name" xml:space="preserve">
+    <value>base64CheckBox</value>
+  </data>
+  <data name="&gt;&gt;base64CheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;base64CheckBox.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;base64CheckBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
+    <value>saveButton</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;saveButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;timeStampCheckBox.Name" xml:space="preserve">
+    <value>timeStampCheckBox</value>
+  </data>
+  <data name="&gt;&gt;timeStampCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeStampCheckBox.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;timeStampCheckBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;displaySentCheckBox.Name" xml:space="preserve">
+    <value>displaySentCheckBox</value>
+  </data>
+  <data name="&gt;&gt;displaySentCheckBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displaySentCheckBox.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;displaySentCheckBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;showHexCheckbox.Name" xml:space="preserve">
+    <value>showHexCheckbox</value>
+  </data>
+  <data name="&gt;&gt;showHexCheckbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showHexCheckbox.Parent" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;showHexCheckbox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="displaySettingGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 359</value>
+  </data>
+  <data name="displaySettingGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>352, 241</value>
+  </data>
+  <data name="displaySettingGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="displaySettingGroupBox.Text" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="&gt;&gt;displaySettingGroupBox.Name" xml:space="preserve">
+    <value>displaySettingGroupBox</value>
+  </data>
+  <data name="&gt;&gt;displaySettingGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;displaySettingGroupBox.Parent" xml:space="preserve">
+    <value>displayPanel</value>
+  </data>
+  <data name="&gt;&gt;displaySettingGroupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="clearDisplayButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
@@ -559,7 +652,7 @@
     <value>NoControl</value>
   </data>
   <data name="clearDisplayButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 189</value>
+    <value>223, 185</value>
   </data>
   <data name="clearDisplayButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 50</value>
@@ -585,6 +678,9 @@
   <data name="base64CheckBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="base64CheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="base64CheckBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 138</value>
   </data>
@@ -592,7 +688,7 @@
     <value>166, 26</value>
   </data>
   <data name="base64CheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="base64CheckBox.Text" xml:space="preserve">
     <value>Base64 Decode</value>
@@ -616,13 +712,13 @@
     <value>NoControl</value>
   </data>
   <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 189</value>
+    <value>15, 185</value>
   </data>
   <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 50</value>
   </data>
   <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="saveButton.Text" xml:space="preserve">
     <value>Save</value>
@@ -652,7 +748,7 @@
     <value>156, 26</value>
   </data>
   <data name="timeStampCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="timeStampCheckBox.Text" xml:space="preserve">
     <value>Display Time</value>
@@ -679,7 +775,7 @@
     <value>200, 27</value>
   </data>
   <data name="displaySentCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="displaySentCheckBox.Text" xml:space="preserve">
     <value>Display Send</value>
@@ -709,7 +805,7 @@
     <value>146, 26</value>
   </data>
   <data name="showHexCheckbox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="showHexCheckbox.Text" xml:space="preserve">
     <value>Show as HEX</value>
@@ -726,32 +822,8 @@
   <data name="&gt;&gt;showHexCheckbox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="displaySettingGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 367</value>
-  </data>
-  <data name="displaySettingGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 245</value>
-  </data>
-  <data name="displaySettingGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="displaySettingGroupBox.Text" xml:space="preserve">
-    <value>Display</value>
-  </data>
-  <data name="&gt;&gt;displaySettingGroupBox.Name" xml:space="preserve">
-    <value>displaySettingGroupBox</value>
-  </data>
-  <data name="&gt;&gt;displaySettingGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;displaySettingGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;displaySettingGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="sendGroupBox.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="sendGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
   </data>
   <data name="&gt;&gt;suffixLabel.Name" xml:space="preserve">
     <value>suffixLabel</value>
@@ -837,16 +909,16 @@
   <data name="&gt;&gt;unitLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Name" xml:space="preserve">
-    <value>intevalTextBox</value>
+  <data name="&gt;&gt;intervalTextBox.Name" xml:space="preserve">
+    <value>intervalTextBox</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.Parent" xml:space="preserve">
     <value>sendGroupBox</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="&gt;&gt;intervalLabel.Name" xml:space="preserve">
@@ -898,13 +970,13 @@
     <value>11</value>
   </data>
   <data name="sendGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>4, 4</value>
   </data>
   <data name="sendGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 312</value>
+    <value>353, 312</value>
   </data>
   <data name="sendGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="sendGroupBox.Text" xml:space="preserve">
     <value>Send Setting</value>
@@ -920,6 +992,36 @@
   </data>
   <data name="&gt;&gt;sendGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="suffixLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="suffixLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="suffixLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>119, 44</value>
+  </data>
+  <data name="suffixLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 22</value>
+  </data>
+  <data name="suffixLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="suffixLabel.Text" xml:space="preserve">
+    <value>Add Suffix</value>
+  </data>
+  <data name="&gt;&gt;suffixLabel.Name" xml:space="preserve">
+    <value>suffixLabel</value>
+  </data>
+  <data name="&gt;&gt;suffixLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;suffixLabel.Parent" xml:space="preserve">
+    <value>sendGroupBox</value>
+  </data>
+  <data name="&gt;&gt;suffixLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="suffixComboBox.AutoCompleteCustomSource" xml:space="preserve">
     <value>\r</value>
@@ -949,7 +1051,7 @@
     <value>70, 30</value>
   </data>
   <data name="suffixComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;suffixComboBox.Name" xml:space="preserve">
     <value>suffixComboBox</value>
@@ -963,9 +1065,6 @@
   <data name="&gt;&gt;suffixComboBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="fileTextBox.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="fileTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 258</value>
   </data>
@@ -973,7 +1072,7 @@
     <value>337, 29</value>
   </data>
   <data name="fileTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;fileTextBox.Name" xml:space="preserve">
     <value>fileTextBox</value>
@@ -997,7 +1096,7 @@
     <value>195, 55</value>
   </data>
   <data name="fileButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="fileButton.Text" xml:space="preserve">
     <value>Select a File</value>
@@ -1015,13 +1114,13 @@
     <value>3</value>
   </data>
   <data name="countTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 86</value>
+    <value>204, 87</value>
   </data>
   <data name="countTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 29</value>
   </data>
   <data name="countTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;countTextBox.Name" xml:space="preserve">
     <value>countTextBox</value>
@@ -1048,7 +1147,7 @@
     <value>60, 22</value>
   </data>
   <data name="countLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="countLabel.Text" xml:space="preserve">
     <value>Count</value>
@@ -1078,7 +1177,7 @@
     <value>30, 22</value>
   </data>
   <data name="unitLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="unitLabel.Text" xml:space="preserve">
     <value>ms</value>
@@ -1095,25 +1194,25 @@
   <data name="&gt;&gt;unitLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="intevalTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 132</value>
+  <data name="intervalTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 128</value>
   </data>
-  <data name="intevalTextBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="intervalTextBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 29</value>
   </data>
-  <data name="intevalTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="intervalTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Name" xml:space="preserve">
-    <value>intevalTextBox</value>
+  <data name="&gt;&gt;intervalTextBox.Name" xml:space="preserve">
+    <value>intervalTextBox</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.Parent" xml:space="preserve">
     <value>sendGroupBox</value>
   </data>
-  <data name="&gt;&gt;intevalTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;intervalTextBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="intervalLabel.AutoSize" type="System.Boolean, mscorlib">
@@ -1129,7 +1228,7 @@
     <value>90, 22</value>
   </data>
   <data name="intervalLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="intervalLabel.Text" xml:space="preserve">
     <value>Interval</value>
@@ -1159,7 +1258,7 @@
     <value>76, 26</value>
   </data>
   <data name="loopCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="loopCheckBox.Text" xml:space="preserve">
     <value>Loop</value>
@@ -1189,7 +1288,7 @@
     <value>66, 26</value>
   </data>
   <data name="sendHexCheckBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="sendHexCheckBox.Text" xml:space="preserve">
     <value>HEX</value>
@@ -1216,7 +1315,7 @@
     <value>120, 55</value>
   </data>
   <data name="sendButton.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>10</value>
   </data>
   <data name="sendButton.Text" xml:space="preserve">
     <value>Send</value>
@@ -1233,37 +1332,37 @@
   <data name="&gt;&gt;sendButton.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="SendTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="sendTextBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="SendTextBox.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="sendTextBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 10.5pt</value>
   </data>
-  <data name="SendTextBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="sendTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 25</value>
   </data>
-  <data name="SendTextBox.Multiline" type="System.Boolean, mscorlib">
+  <data name="sendTextBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="SendTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="sendTextBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Vertical</value>
   </data>
-  <data name="SendTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>803, 287</value>
+  <data name="sendTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>814, 287</value>
   </data>
-  <data name="SendTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="sendTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;SendTextBox.Name" xml:space="preserve">
-    <value>SendTextBox</value>
+  <data name="&gt;&gt;sendTextBox.Name" xml:space="preserve">
+    <value>sendTextBox</value>
   </data>
-  <data name="&gt;&gt;SendTextBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;sendTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SendTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;sendTextBox.Parent" xml:space="preserve">
     <value>inputGroupBox</value>
   </data>
-  <data name="&gt;&gt;SendTextBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;sendTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="displayPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -1273,13 +1372,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="dispalyGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 0</value>
+    <value>361, 4</value>
   </data>
   <data name="dispalyGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>807, 603</value>
+    <value>820, 622</value>
   </data>
   <data name="dispalyGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>0</value>
   </data>
   <data name="dispalyGroupBox.Text" xml:space="preserve">
     <value>Display Content</value>
@@ -1294,13 +1393,13 @@
     <value>displayPanel</value>
   </data>
   <data name="&gt;&gt;dispalyGroupBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="displayPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>0, 0</value>
   </data>
   <data name="displayPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1168, 603</value>
+    <value>1184, 629</value>
   </data>
   <data name="displayPanel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1315,22 +1414,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;displayPanel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="sendPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
   <data name="inputGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+    <value>Top, Left, Right</value>
   </data>
   <data name="inputGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>358, 3</value>
+    <value>361, 4</value>
   </data>
   <data name="inputGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>809, 315</value>
+    <value>820, 315</value>
   </data>
   <data name="inputGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="inputGroupBox.Text" xml:space="preserve">
     <value>Input Something to Send</value>
@@ -1348,13 +1447,13 @@
     <value>0</value>
   </data>
   <data name="sendPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 618</value>
+    <value>0, 632</value>
   </data>
   <data name="sendPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1164, 318</value>
+    <value>1184, 318</value>
   </data>
   <data name="sendPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;sendPanel.Name" xml:space="preserve">
     <value>sendPanel</value>
@@ -1381,7 +1480,7 @@
     <value>0, 22</value>
   </data>
   <data name="portStatusLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;portStatusLabel.Name" xml:space="preserve">
     <value>portStatusLabel</value>
@@ -1432,7 +1531,7 @@
     <value>135, 34</value>
   </data>
   <data name="statusResetButton.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="statusResetButton.Text" xml:space="preserve">
     <value>Reset Count</value>
@@ -1459,7 +1558,7 @@
     <value>191, 29</value>
   </data>
   <data name="sentTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="sentTextBox.Text" xml:space="preserve">
     <value>0</value>
@@ -1489,7 +1588,7 @@
     <value>50, 22</value>
   </data>
   <data name="sendCountLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="sendCountLabel.Text" xml:space="preserve">
     <value>Sent</value>
@@ -1516,7 +1615,7 @@
     <value>191, 29</value>
   </data>
   <data name="receiveTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="receiveTextBox.Text" xml:space="preserve">
     <value>0</value>
@@ -1546,7 +1645,7 @@
     <value>90, 22</value>
   </data>
   <data name="recvCountLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="recvCountLabel.Text" xml:space="preserve">
     <value>Received</value>
@@ -1567,13 +1666,13 @@
     <value>Bottom</value>
   </data>
   <data name="statusPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 942</value>
+    <value>0, 956</value>
   </data>
   <data name="statusPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>1184, 52</value>
   </data>
   <data name="statusPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;statusPanel.Name" xml:space="preserve">
     <value>statusPanel</value>
@@ -1585,34 +1684,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
-  <data name="suffixLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 4</value>
   </data>
-  <data name="suffixLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 44</value>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
   </data>
-  <data name="suffixLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 22</value>
-  </data>
-  <data name="suffixLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="suffixLabel.Text" xml:space="preserve">
-    <value>Add Suffix</value>
-  </data>
-  <data name="&gt;&gt;suffixLabel.Name" xml:space="preserve">
-    <value>suffixLabel</value>
-  </data>
-  <data name="&gt;&gt;suffixLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;suffixLabel.Parent" xml:space="preserve">
-    <value>sendGroupBox</value>
-  </data>
-  <data name="&gt;&gt;suffixLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1620,11 +1704,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>10, 22</value>
   </data>
-  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1184, 994</value>
+    <value>1184, 1008</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Consolas, 9pt</value>
@@ -6140,14 +6221,11 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Serial Communication Debugger</value>
+    <value>Serial Communication</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MainForm</value>

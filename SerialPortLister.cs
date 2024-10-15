@@ -112,7 +112,7 @@ namespace mscom
             }
             else
             {
-                Console.WriteLine("Serial port is not open.");
+                Console.Error.WriteLine("Serial port is not open.");
                 return -1;
             }
         }
@@ -125,14 +125,9 @@ namespace mscom
                 {
                     if (format == DataFormat.HEX)
                     {
-                        Console.WriteLine($"Sent: {message}");
                         byte[] msg = HexString.ConvertHexStringToBytes(message);
                         _serialPort.Write(msg, 0, msg.Length);
                         Console.WriteLine($"Sent: {message}");
-                        foreach (byte a in msg)
-                        {
-                            Console.WriteLine($"{a}");
-                        }
 
                         return msg.Length;
                     }
@@ -152,7 +147,7 @@ namespace mscom
             }
             else
             {
-                Console.WriteLine("Serial port is not open.");
+                Console.Error.WriteLine("Serial port is not open.");
                 return -1;
             }
         }

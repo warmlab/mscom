@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.portBox = new System.Windows.Forms.GroupBox();
             this.handshakeComboBox = new System.Windows.Forms.ComboBox();
@@ -46,24 +47,26 @@
             this.portLabel = new System.Windows.Forms.Label();
             this.displayTextBox = new System.Windows.Forms.TextBox();
             this.displaySettingGroupBox = new System.Windows.Forms.GroupBox();
+            this.clearDisplayButton = new System.Windows.Forms.Button();
             this.base64CheckBox = new System.Windows.Forms.CheckBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.timeStampCheckBox = new System.Windows.Forms.CheckBox();
             this.displaySentCheckBox = new System.Windows.Forms.CheckBox();
             this.showHexCheckbox = new System.Windows.Forms.CheckBox();
             this.sendGroupBox = new System.Windows.Forms.GroupBox();
+            this.suffixLabel = new System.Windows.Forms.Label();
             this.suffixComboBox = new System.Windows.Forms.ComboBox();
             this.fileTextBox = new System.Windows.Forms.TextBox();
             this.fileButton = new System.Windows.Forms.Button();
             this.countTextBox = new System.Windows.Forms.TextBox();
             this.countLabel = new System.Windows.Forms.Label();
             this.unitLabel = new System.Windows.Forms.Label();
-            this.intevalTextBox = new System.Windows.Forms.TextBox();
+            this.intervalTextBox = new System.Windows.Forms.TextBox();
             this.intervalLabel = new System.Windows.Forms.Label();
             this.loopCheckBox = new System.Windows.Forms.CheckBox();
             this.sendHexCheckBox = new System.Windows.Forms.CheckBox();
             this.sendButton = new System.Windows.Forms.Button();
-            this.SendTextBox = new System.Windows.Forms.TextBox();
+            this.sendTextBox = new System.Windows.Forms.TextBox();
             this.displayPanel = new System.Windows.Forms.Panel();
             this.dispalyGroupBox = new System.Windows.Forms.GroupBox();
             this.sendPanel = new System.Windows.Forms.Panel();
@@ -76,8 +79,7 @@
             this.sendCountLabel = new System.Windows.Forms.Label();
             this.receiveTextBox = new System.Windows.Forms.TextBox();
             this.recvCountLabel = new System.Windows.Forms.Label();
-            this.suffixLabel = new System.Windows.Forms.Label();
-            this.clearDisplayButton = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.portBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portPictureBox)).BeginInit();
             this.displaySettingGroupBox.SuspendLayout();
@@ -209,6 +211,13 @@
             this.displaySettingGroupBox.Name = "displaySettingGroupBox";
             this.displaySettingGroupBox.TabStop = false;
             // 
+            // clearDisplayButton
+            // 
+            resources.ApplyResources(this.clearDisplayButton, "clearDisplayButton");
+            this.clearDisplayButton.Name = "clearDisplayButton";
+            this.clearDisplayButton.UseVisualStyleBackColor = true;
+            this.clearDisplayButton.Click += new System.EventHandler(this.clearDisplayButton_Click);
+            // 
             // base64CheckBox
             // 
             resources.ApplyResources(this.base64CheckBox, "base64CheckBox");
@@ -220,6 +229,7 @@
             resources.ApplyResources(this.saveButton, "saveButton");
             this.saveButton.Name = "saveButton";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // timeStampCheckBox
             // 
@@ -249,13 +259,18 @@
             this.sendGroupBox.Controls.Add(this.countTextBox);
             this.sendGroupBox.Controls.Add(this.countLabel);
             this.sendGroupBox.Controls.Add(this.unitLabel);
-            this.sendGroupBox.Controls.Add(this.intevalTextBox);
+            this.sendGroupBox.Controls.Add(this.intervalTextBox);
             this.sendGroupBox.Controls.Add(this.intervalLabel);
             this.sendGroupBox.Controls.Add(this.loopCheckBox);
             this.sendGroupBox.Controls.Add(this.sendHexCheckBox);
             this.sendGroupBox.Controls.Add(this.sendButton);
             this.sendGroupBox.Name = "sendGroupBox";
             this.sendGroupBox.TabStop = false;
+            // 
+            // suffixLabel
+            // 
+            resources.ApplyResources(this.suffixLabel, "suffixLabel");
+            this.suffixLabel.Name = "suffixLabel";
             // 
             // suffixComboBox
             // 
@@ -274,14 +289,17 @@
             // 
             // fileTextBox
             // 
+            this.fileTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             resources.ApplyResources(this.fileTextBox, "fileTextBox");
             this.fileTextBox.Name = "fileTextBox";
+            this.fileTextBox.ReadOnly = true;
             // 
             // fileButton
             // 
             resources.ApplyResources(this.fileButton, "fileButton");
             this.fileButton.Name = "fileButton";
             this.fileButton.UseVisualStyleBackColor = true;
+            this.fileButton.Click += new System.EventHandler(this.fileButton_Click);
             // 
             // countTextBox
             // 
@@ -298,10 +316,10 @@
             resources.ApplyResources(this.unitLabel, "unitLabel");
             this.unitLabel.Name = "unitLabel";
             // 
-            // intevalTextBox
+            // intervalTextBox
             // 
-            resources.ApplyResources(this.intevalTextBox, "intevalTextBox");
-            this.intevalTextBox.Name = "intevalTextBox";
+            resources.ApplyResources(this.intervalTextBox, "intervalTextBox");
+            this.intervalTextBox.Name = "intervalTextBox";
             // 
             // intervalLabel
             // 
@@ -327,14 +345,16 @@
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
-            // SendTextBox
+            // sendTextBox
             // 
-            resources.ApplyResources(this.SendTextBox, "SendTextBox");
-            this.SendTextBox.Name = "SendTextBox";
+            resources.ApplyResources(this.sendTextBox, "sendTextBox");
+            this.sendTextBox.Name = "sendTextBox";
             // 
             // displayPanel
             // 
             resources.ApplyResources(this.displayPanel, "displayPanel");
+            this.displayPanel.Controls.Add(this.displaySettingGroupBox);
+            this.displayPanel.Controls.Add(this.portBox);
             this.displayPanel.Controls.Add(this.dispalyGroupBox);
             this.displayPanel.Name = "displayPanel";
             // 
@@ -355,7 +375,7 @@
             // inputGroupBox
             // 
             resources.ApplyResources(this.inputGroupBox, "inputGroupBox");
-            this.inputGroupBox.Controls.Add(this.SendTextBox);
+            this.inputGroupBox.Controls.Add(this.sendTextBox);
             this.inputGroupBox.Name = "inputGroupBox";
             this.inputGroupBox.TabStop = false;
             // 
@@ -388,6 +408,7 @@
             resources.ApplyResources(this.statusResetButton, "statusResetButton");
             this.statusResetButton.Name = "statusResetButton";
             this.statusResetButton.UseVisualStyleBackColor = true;
+            this.statusResetButton.Click += new System.EventHandler(this.statusResetButton_Click);
             // 
             // sentTextBox
             // 
@@ -413,26 +434,18 @@
             resources.ApplyResources(this.recvCountLabel, "recvCountLabel");
             this.recvCountLabel.Name = "recvCountLabel";
             // 
-            // suffixLabel
+            // contextMenuStrip1
             // 
-            resources.ApplyResources(this.suffixLabel, "suffixLabel");
-            this.suffixLabel.Name = "suffixLabel";
-            // 
-            // clearDisplayButton
-            // 
-            resources.ApplyResources(this.clearDisplayButton, "clearDisplayButton");
-            this.clearDisplayButton.Name = "clearDisplayButton";
-            this.clearDisplayButton.UseVisualStyleBackColor = true;
-            this.clearDisplayButton.Click += new System.EventHandler(this.clearDisplayButton_Click);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
             // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.statusPanel);
-            this.Controls.Add(this.displaySettingGroupBox);
             this.Controls.Add(this.sendPanel);
-            this.Controls.Add(this.portBox);
             this.Controls.Add(this.displayPanel);
             this.Name = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -444,6 +457,7 @@
             this.sendGroupBox.ResumeLayout(false);
             this.sendGroupBox.PerformLayout();
             this.displayPanel.ResumeLayout(false);
+            this.displayPanel.PerformLayout();
             this.dispalyGroupBox.ResumeLayout(false);
             this.dispalyGroupBox.PerformLayout();
             this.sendPanel.ResumeLayout(false);
@@ -453,7 +467,6 @@
             this.statusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.portStatuspictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -479,7 +492,7 @@
         private System.Windows.Forms.CheckBox timeStampCheckBox;
         private System.Windows.Forms.CheckBox displaySentCheckBox;
         private System.Windows.Forms.GroupBox sendGroupBox;
-        private System.Windows.Forms.TextBox intevalTextBox;
+        private System.Windows.Forms.TextBox intervalTextBox;
         private System.Windows.Forms.Label intervalLabel;
         private System.Windows.Forms.CheckBox loopCheckBox;
         private System.Windows.Forms.CheckBox sendHexCheckBox;
@@ -489,7 +502,7 @@
         private System.Windows.Forms.TextBox countTextBox;
         private System.Windows.Forms.Label countLabel;
         private System.Windows.Forms.Label unitLabel;
-        private System.Windows.Forms.TextBox SendTextBox;
+        private System.Windows.Forms.TextBox sendTextBox;
         private System.Windows.Forms.Panel displayPanel;
         private System.Windows.Forms.Panel sendPanel;
         private System.Windows.Forms.GroupBox dispalyGroupBox;
@@ -508,6 +521,7 @@
         private System.Windows.Forms.ComboBox suffixComboBox;
         private System.Windows.Forms.Label suffixLabel;
         private System.Windows.Forms.Button clearDisplayButton;
-    }
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+	}
 }
 

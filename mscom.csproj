@@ -50,6 +50,9 @@
   <PropertyGroup>
     <ApplicationIcon>xscom.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +67,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutMeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMeForm.Designer.cs">
+      <DependentUpon>AboutMeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base64Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base64Form.Designer.cs">
+      <DependentUpon>Base64Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HexForm.Designer.cs">
+      <DependentUpon>HexForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HexString.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -79,6 +100,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SerialPortLister.cs" />
+    <EmbeddedResource Include="AboutMeForm.resx">
+      <DependentUpon>AboutMeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base64Form.resx">
+      <DependentUpon>Base64Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexForm.resx">
+      <DependentUpon>HexForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.en-CA.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +120,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

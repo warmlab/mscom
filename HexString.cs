@@ -21,16 +21,15 @@ namespace mscom
             {
                 try
                 {
-                    // Convert the hex string (e.g., "04") to a byte
-                    byteArray[i] = Convert.ToByte(hexValues[i], 16);
+                    if (!string.IsNullOrEmpty(hexValues[i]))
+                        // Convert the hex string (e.g., "04") to a byte
+                        byteArray[i] = Convert.ToByte(hexValues[i], 16);
                 }
                 catch (FormatException ex)
                 {
                     Console.WriteLine($"Error converting hex string to byte: {ex.Message}");
                 }
             }
-
-            Console.WriteLine(byteArray);
 
             return byteArray;
         }
@@ -49,7 +48,7 @@ namespace mscom
         public static string ConvertStringToHexString(string inputString)
         {
             // Convert each character in the input string to its byte representation
-            byte[] byteArray = Encoding.ASCII.GetBytes(inputString);
+            byte[] byteArray = Encoding.UTF8.GetBytes(inputString);
 
             // Convert each byte to a two-character hexadecimal string and join them with a space
             string hexString = BitConverter.ToString(byteArray).Replace("-", " ").ToLower();
