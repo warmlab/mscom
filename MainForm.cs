@@ -249,7 +249,7 @@ namespace mscom
 					}
 					catch (Exception ex)
 					{
-						Console.Error.WriteLine($"Error in File $[{fileTextBox.Text}]");
+						Console.Error.WriteLine($"Error in File $[{fileTextBox.Text}], ${ex}");
 					}
 				}
 

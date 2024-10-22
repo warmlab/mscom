@@ -42,13 +42,14 @@
             // 
             // sourceTextBox
             // 
-            this.sourceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.sourceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sourceTextBox.Font = new System.Drawing.Font("Consolas", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sourceTextBox.Location = new System.Drawing.Point(12, 67);
             this.sourceTextBox.Multiline = true;
             this.sourceTextBox.Name = "sourceTextBox";
-            this.sourceTextBox.Size = new System.Drawing.Size(1154, 324);
+            this.sourceTextBox.Size = new System.Drawing.Size(808, 252);
             this.sourceTextBox.TabIndex = 0;
             // 
             // targetTextBox
@@ -57,16 +58,17 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.targetTextBox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.targetTextBox.Font = new System.Drawing.Font("Consolas", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.targetTextBox.Location = new System.Drawing.Point(12, 408);
+            this.targetTextBox.Location = new System.Drawing.Point(12, 336);
             this.targetTextBox.Multiline = true;
             this.targetTextBox.Name = "targetTextBox";
             this.targetTextBox.ReadOnly = true;
-            this.targetTextBox.Size = new System.Drawing.Size(1154, 324);
+            this.targetTextBox.Size = new System.Drawing.Size(808, 324);
             this.targetTextBox.TabIndex = 3;
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(999, 12);
+            this.convertButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.convertButton.Location = new System.Drawing.Point(653, 12);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(167, 42);
             this.convertButton.TabIndex = 4;
@@ -98,7 +100,8 @@
             // 
             // exchangeButton
             // 
-            this.exchangeButton.Location = new System.Drawing.Point(826, 12);
+            this.exchangeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.exchangeButton.Location = new System.Drawing.Point(480, 12);
             this.exchangeButton.Name = "exchangeButton";
             this.exchangeButton.Size = new System.Drawing.Size(167, 42);
             this.exchangeButton.TabIndex = 7;
@@ -108,17 +111,19 @@
             // 
             // radioGroupPanel
             // 
+            this.radioGroupPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radioGroupPanel.Controls.Add(this.fromBase64RadioButton);
             this.radioGroupPanel.Controls.Add(this.toBase64RadioButton);
-            this.radioGroupPanel.Location = new System.Drawing.Point(193, 12);
+            this.radioGroupPanel.Location = new System.Drawing.Point(13, 12);
             this.radioGroupPanel.Name = "radioGroupPanel";
             this.radioGroupPanel.Size = new System.Drawing.Size(307, 42);
             this.radioGroupPanel.TabIndex = 9;
             // 
             // hexCheckBox
             // 
+            this.hexCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.hexCheckBox.AutoSize = true;
-            this.hexCheckBox.Location = new System.Drawing.Point(506, 23);
+            this.hexCheckBox.Location = new System.Drawing.Point(326, 23);
             this.hexCheckBox.Name = "hexCheckBox";
             this.hexCheckBox.Size = new System.Drawing.Size(124, 22);
             this.hexCheckBox.TabIndex = 10;
@@ -129,7 +134,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 744);
+            this.ClientSize = new System.Drawing.Size(832, 672);
             this.Controls.Add(this.hexCheckBox);
             this.Controls.Add(this.radioGroupPanel);
             this.Controls.Add(this.exchangeButton);
